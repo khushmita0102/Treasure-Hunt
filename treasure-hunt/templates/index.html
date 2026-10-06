@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treasure Hunt – Graph Traversal</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🗺️ Treasure Hunt</h1>
+    <p class="subtitle">Graph Traversal Visualization &mdash; BFS &amp; DFS</p>
+  </header>
+
+  <main>
+
+    <!-- Grid Section -->
+    <section class="card grid-section">
+      <h2>6 × 6 Grid</h2>
+      <div id="grid-container"></div>
+
+      <div class="legend">
+        <span class="leg start">S Start</span>
+        <span class="leg treasure">T Treasure</span>
+        <span class="leg wall"># Wall</span>
+        <span class="leg visited">Visited</span>
+        <span class="leg visiting">Exploring</span>
+        <span class="leg path">Path</span>
+      </div>
+
+      <div class="controls">
+        <button id="btn-bfs" onclick="runAlgorithm('bfs')">▶ Run BFS</button>
+        <button id="btn-dfs" onclick="runAlgorithm('dfs')">▶ Run DFS</button>
+        <button id="btn-reset" onclick="resetGrid()">↺ Reset</button>
+      </div>
+
+      <div class="stats">
+        <span>Algorithm: <strong id="stat-algo">—</strong></span>
+        <span>Nodes Visited: <strong id="stat-nodes">—</strong></span>
+        <span>Path Length: <strong id="stat-path">—</strong></span>
+        <span>Status: <strong id="stat-status">Ready</strong></span>
+      </div>
+    </section>
+
+    <!-- Algorithm Info Panel -->
+    <section class="card info-section" id="info-panel">
+      <h2>Algorithm Information</h2>
+      <div id="info-content">
+        <p class="muted">Click Run BFS or Run DFS to see algorithm details.</p>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="card compare-section">
+      <h2>BFS vs DFS Comparison</h2>
+      <div id="compare-msg" class="muted">Run both BFS and DFS to compare results.</div>
+      <table id="compare-table" class="hidden">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>BFS</th>
+            <th>DFS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Nodes Visited</td><td id="c-bfs-nodes">—</td><td id="c-dfs-nodes">—</td></tr>
+          <tr><td>Path Length</td><td id="c-bfs-path">—</td><td id="c-dfs-path">—</td></tr>
+          <tr><td>Data Structure</td><td>Queue</td><td>Stack</td></tr>
+          <tr><td>Search Strategy</td><td>Level-wise</td><td>Depth-wise</td></tr>
+          <tr><td>Time Complexity</td><td>O(V + E)</td><td>O(V + E)</td></tr>
+          <tr><td>Shortest Path?</td><td>Yes</td><td>No</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>DAA Mini Project &mdash; Graph Traversal Algorithms</p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
