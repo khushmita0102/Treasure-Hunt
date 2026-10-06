@@ -49,12 +49,6 @@ treasure-hunt/
 └── .gitignore
 ```
 
-## Deploying to Vercel
-
-1. Push the repository to GitHub.
-2. Import the repo at [vercel.com](https://vercel.com).
-3. Vercel auto-detects `vercel.json` — no extra settings needed.
-4. Click **Deploy**.
 
 ## API Endpoints
 
